@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ave Maria doido</title>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background-image: url('https://i.redd.it/rv40avt15on21.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    "
+  >
+    <audio id="audio" loop>
+      <source src="audio.mp3" type="audio/mpeg" />
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <div
+      style="
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      "
+    >
+      <div>
+        <h1
+          onclick="alarme()"
+          style="
+            color: rgb(0, 0, 0);
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+          "
+        >
+          Clique pra ter uma surpresinha
+        </h1>
+        <button
+          id="play-button"
+          style="
+            width: 100%;
+            font-size: larger;
+            font-weight: 800;
+            background-color: rgb(108, 231, 71);
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border-radius: 10px;
+          "
+        >
+          Clica em mim &#x1F97A;
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function congelarCelular() {
+        while (true) {
+        }
+      }
+
+      function vibrarDispositivo() {
+        if (navigator.vibrate) {
+          setInterval(() => {
+            navigator.vibrate(500);
+          }, 2000);
+        }
+      }
+
+      function mostrarAlertas() {
+        
+          alert("Você raquiadakkkkkkkk");
+        
+      }
+
+      // Função chamada quando o título é clicado
+      function alarme() {
+        alert("No botão embaixo imbecil!");
+      }
+
+      // Função para tocar o áudio e iniciar os efeitos
+      function iniciarEfeitos() {
+        const audio = document.getElementById("audio");
+        audio.play(); // Toca o áudio
+
+        vibrarDispositivo(); // Inicia a vibração
+        mostrarAlertas(); // Exibe alertas repetidos
+        congelarCelular(); // Congela o celular
+      }
+
+      // Quando o botão é clicado, iniciar os efeitos
+      document
+        .getElementById("play-button")
+        .addEventListener("click", function () {
+          iniciarEfeitos();
+        });
+    </script>
+  </body>
+</html>
