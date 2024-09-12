@@ -9,10 +9,11 @@
     style="
       margin: 0;
       padding: 0;
-      background-image: url('https://i.redd.it/rv40avt15on21.jpg');
+      background-image: url('https://i.pinimg.com/236x/3d/74/d7/3d74d7f4649f299e206837562afee7e1.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+      overflow: hidden;
     "
   >
     <audio id="audio" loop>
@@ -48,7 +49,7 @@
             font-size: larger;
             font-weight: 800;
             background-color: rgb(108, 231, 71);
-            color: rgb(0, 0, 0);
+            color: rgb(25, 0, 255);
             padding: 10px;
             border-radius: 10px;
           "
@@ -60,38 +61,32 @@
     </div>
 
     <script>
-      // Função chamada quando o título é clicado
       function alarme() {
         alert("No botão embaixo imbecil!");
       }
 
-      // Função para tocar o áudio e iniciar os efeitos
       function iniciarEfeitos() {
         const audio = document.getElementById("audio");
-        audio.play(); // Toca o áudio
+        audio.play();  
 
-        vibrarDispositivo(); // Inicia a vibração
-        mostrarAlertas(); // Exibe um alerta
-        inserirIframe(); // Insere o iframe com o vídeo
+        vibrarDispositivo(); 
+        mostrarAlertas();  
+        inserirIframe();  
       }
 
-      // Função para vibrar o dispositivo (se suportado)
+      
       function vibrarDispositivo() {
         if (navigator.vibrate) {
           navigator.vibrate(500);
         }
       }
-
-      // Função para exibir um alerta
       function mostrarAlertas() {
         alert("Você raquiadakkkkkkkk");
       }
-
-      // Função para inserir o iframe na página
       function inserirIframe() {
         const iframeContainer = document.getElementById("iframe-container");
         const iframe = document.createElement("iframe");
-        iframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"; // Vídeo com autoplay
+        iframe.src = "https://www.youtube.com/embed/-mJkdEaPTM4?autoplay=1";  
         iframe.width = "560";
         iframe.height = "315";
         iframe.style.border = "none";
@@ -99,7 +94,6 @@
         iframeContainer.appendChild(iframe);
       }
 
-      // Quando o botão é clicado, iniciar os efeitos
       document.getElementById("play-button").addEventListener("click", function () {
         iniciarEfeitos();
       });
